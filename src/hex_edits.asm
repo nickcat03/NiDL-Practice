@@ -17,6 +17,14 @@
 	.word 0x03002441
 	.word 0x03002441
 
+; Switches always respawn
+.org 0x080B497A
+    cmp r0, r0
+
+; Skip goal games
+.org 0x08025374
+    cmp r0, #0xFF
+
 
 ;; All of the below code is for handling all doors unlocked
 ; Bonus doors (this also puts all stars in star hub room)
@@ -56,3 +64,7 @@
 ;0x249A84 blank spot
 ;0x2FE000 blank
 ;0x3CEC00 free spot thats actually inside code
+
+;int 23C0 switch check
+
+;0x08032754 state updater?
