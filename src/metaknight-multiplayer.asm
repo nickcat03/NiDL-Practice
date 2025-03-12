@@ -8,7 +8,9 @@
 		push {lr}
 		; custom code:
 
-
+		mov r0, #0xFE
+		ldr r1, =#0x03001F30
+		strb r0, [r1]
 
 		; Jump back to controller code first
 		bl 0x080011C0
