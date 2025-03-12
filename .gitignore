@@ -1,4 +1,11 @@
 *.gba
+armips.exe
+
 hack.o
 hack-temp.s
 a.out
+*.ips
+*.sav
+*.sa2
+*.sa3
+*.sa4
