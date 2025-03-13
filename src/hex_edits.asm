@@ -6,6 +6,10 @@
 .org 0x08009A9A
     add r2, r2, #0
 
+; Lives set to 99 (this makes no difference it's just cosmetic)
+.org 0x0800B13A
+	mov r0, #0x63
+
 ; Always have boss rush and meta knightmare
 .org 0x0800C766
 	and r0, r0
@@ -18,12 +22,12 @@
 	.word 0x03002441
 
 ; Switches always respawn
-;.org 0x080B497A
-;    cmp r0, r0
+.org 0x080B497A
+    cmp r0, r0
 
 ; Skip goal games
-;.org 0x08025374
-;    cmp r0, #0xFF
+.org 0x08025374
+    cmp r0, #0xFF
 
 
 ;; All of the below code is for handling all doors unlocked
