@@ -42,6 +42,18 @@
 .org 0x08022590
 	cmp r0, #0xFF
 
+; Keep walls cleared after a level clear
+.org 0x0802781A
+	mov r0, #0x02
+
+; bonus doors (idk what this did so im leaving it commented)
+;.org 0x08027898
+;    nop : nop
+
+; for some reason this code will sometimes de-activate bonus doors?
+;.org 0x08027946
+;	mov r0, #0xFF
+
 ; Destroy all walls in overworlds
 .org 0x08027964
     mov r0, #0x02
