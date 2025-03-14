@@ -24,13 +24,13 @@
 
 ; this code might be problematic (stops multiplayer)
 ; Switches always respawn
-;.org 0x080B497A
-;    cmp r0, r0
+.org 0x080B497A
+    cmp r0, r0
 
 ; this code might be problematic (stops multiplayer)
 ; Skip goal games
-;.org 0x08025374
-;    cmp r0, #0xFF
+.org 0x08025374
+    cmp r0, #0xFF
 
 
 ;; All of the below code is for handling all doors unlocked
@@ -76,24 +76,3 @@
 ;    mov r0, #0x02
 
 
-
-;0x0800124E runs every frame
-;0x08040202 runs every gameplay frame
-
-;0x0249A84 blank spot
-;0x02FE000 blank
-;0x083CEC00 free spot thats actually inside code
-
-
-;0x08032754 state updater?
-
-; this code was when i was screwing with trying to get mknightmare multiplayer working
-; lol
-;.org 0x0800C2B6
-;    mov r1, #0x01
-;	nop
-;	nop
-;.org 0x0800C2C4
-;	STRB #0x01, [R0, #0x00]
-;.org 0x0800C2C0
-;	mov r1, #0x01

@@ -1,11 +1,20 @@
-; RAM addresses
+; General RAM addresses
 lives               equ 0x02007D48
 kirby_or_mk         equ 0x03001F30
 sprites_frozen      equ 0x0200D110
 reload_room         equ 0x03002428
+ability             equ 0x0300217D
 
+; HUD
+raise_ability_HUD   equ 0x020061D4
+ability_HUD_timer   equ 0x0200801C
+
+; Controller inputs
 input_everyframe    equ 0x03001EF4
 input_gameplay      equ 0x03002440
+
+; Custom RAM addresses
+ability_select_toggle   equ 0x03007800
 
 ; Inputs
 KEY_A          equ 0x1
