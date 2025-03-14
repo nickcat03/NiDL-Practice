@@ -33,7 +33,15 @@
 ;    cmp r0, #0xFF
 
 
-;; All of the below code is for handling overworld doors
+;; All of the below code is for handling all doors unlocked
+; Activate the Star rooms unlocked automatically (mark the levels associated with them as cleared)
+.org 0x080225E0
+    mov r0, #0x02
+
+; Activate all unlockable Star rooms (mark the star room switches as cleared)
+.org 0x08022590
+	cmp r0, #0xFF
+
 ; Destroy all walls in overworlds
 .org 0x08027964
     mov r0, #0x02
