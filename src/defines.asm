@@ -2,6 +2,7 @@
 lives               equ 0x02007D48
 kirby_or_mk         equ 0x03001F30
 sprites_frozen      equ 0x0200D110
+reload_room         equ 0x03002428
 
 input_everyframe    equ 0x03001EF4
 input_gameplay      equ 0x03002440
